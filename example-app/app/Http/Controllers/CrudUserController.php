@@ -61,6 +61,7 @@ class CrudUserController extends Controller
         $user = User::create([
             'username' => $request->username,
             'phone' => $request->phone,
+            'sex' => $request->sex,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);

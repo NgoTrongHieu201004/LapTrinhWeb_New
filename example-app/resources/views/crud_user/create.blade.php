@@ -17,6 +17,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                           
                             <div class="mb-3">
                                 <label class="form-label">Phone</label>
                                 <input type="text" class="form-control" name="phone" required autofocus>
@@ -24,7 +25,13 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-
+                            <div class="mb-3">
+                                <label class="form-label">Sex</label>
+                                <input type="text" class="form-control" name="sex" required autofocus>
+                                @error('sex')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
                                 <input type="email" class="form-control" name="email" required>
