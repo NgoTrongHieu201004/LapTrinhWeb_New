@@ -20,9 +20,9 @@
                             <td>{{ $user->username }}</td>
                             <td>{{ $user->email }}</td>
                             <td>
-                                <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
-                                <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Delete</a>
+                                <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-sm">View</a>
+                                <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-sm">Edit</a>
+                                <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn  btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Delete</a>
                             </td>
                         </tr>
                     @endforeach

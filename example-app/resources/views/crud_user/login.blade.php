@@ -1,7 +1,6 @@
 @extends('dashboard')
 
 @section('content')
-    <!-- Đăng nhập -->
     <main class="login-form">
     <div class="container mt-5 content">
         <div class="row justify-content-center">

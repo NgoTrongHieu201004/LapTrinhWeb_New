@@ -25,6 +25,20 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div class="mb-3">
+                                <label class="form-label">Like</label>
+                                <input type="email" class="form-control" name="like" required>
+                                @error('like')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">FaceBook</label>
+                                <input type="email" class="form-control" name="facebook" required>
+                                @error('facebook')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Mật khẩu</label>
