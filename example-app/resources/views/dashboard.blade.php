@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -14,6 +13,7 @@
         body {
             display: flex;
             flex-direction: column;
+            background-color: white;
         }
         .content {
             flex: 1;
@@ -21,36 +21,38 @@
         .footer {
             position: relative;
             width: 100%;
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('user.list') }}">Trang Chủ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    @guest
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Đăng Nhập</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('user.createUser') }}">Đăng Ký</a></li>
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signout') }}">Đăng Xuất</a>
-                    </li>
-                    @endguest
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container d-flex justify-content-center">
+            <div class="navbar-nav">
+                @guest
+                <a class="nav-link px-3" href="{{ route('user.list') }}">Home</a>
+                <span class="nav-link">|</span>
+                <a class="nav-link px-3" href="{{ route('login') }}">Đăng Nhập</a>
+                <span class="nav-link">|</span>
+                <a class="nav-link px-3" href="{{ route('user.createUser') }}">Đăng Ký</a>
+                @else
+                <a class="nav-link px-3" href="{{ route('user.list') }}">Trang Chủ</a>
+                <span class="nav-link">|</span>
+                <a class="nav-link px-3" href="{{ route('login') }}">Đăng Nhập</a>
+                <span class="nav-link">|</span>
+                <a class="nav-link px-3" href="{{ route('signout') }}">Đăng Xuất</a>
+                @endguest
             </div>
         </div>
     </nav>
+
     @yield('content')
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5 footer">
+    <footer class="bg-white text-dark text-center py-3 mt-5 footer">
         <p class="mb-0">Lập Trình Web @01/2024</p>
     </footer>
 

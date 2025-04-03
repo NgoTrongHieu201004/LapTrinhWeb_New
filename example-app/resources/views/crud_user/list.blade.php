@@ -2,34 +2,32 @@
 
 @section('content')
     <main class="login-form">
-    <div class="container mt-5 content">
-        <h3 class="text-center">Danh Sách Người Dùng</h3>
-        <table class="table table-striped table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th style="display:none; ">ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Thao Tác</th>
-                </tr>
-            </thead>
-            <tbody>
-            @foreach($users as $user)
-                            <tr>
-                                <th style="display:none; ">{{ $user->id }}</th>
-                                <th>{{ $user->username }}</th>
-                                <th>{{ $user->email }}</th>
-                                <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
-                                </th>
-                            </tr>
-                        @endforeach
-            </tbody>
-        </table>
-    </div>
-
-      
+        <div class="container mt-5 content">
+            <h3 class="text-center">Danh Sách User</h3>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>STT</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($users as $index => $user)
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $user->username }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>
+                                <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
+                                <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </main>
 @endsection
