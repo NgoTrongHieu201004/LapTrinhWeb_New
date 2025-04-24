@@ -13,9 +13,9 @@
                             <input type="hidden" name="id" value="{{ $user->id }}">
                             
                             <div class="mb-3">
-                                <label class="form-label">Username</label>
-                                <input type="text" class="form-control" name="username" value="{{ $user->username }}" required>
-                                @error('username')
+                                <label class="form-label">name</label>
+                                <input type="text" class="form-control" name="name" value="{{ $user->name }}" required>
+                                @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
