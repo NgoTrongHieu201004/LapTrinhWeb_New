@@ -7,9 +7,9 @@
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
                     <tr>
-                        <th>STT</th>
-                        <th>Username</th>
-                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Eamil</th>
+                        <th>Role</th>
                         <th>Thao Tác</th>
                     </tr>
                 </thead>
@@ -17,7 +17,7 @@
                     @foreach($users as $index => $user)
                         <tr>
                             <td>{{ $index + 1 }}</td>
-                            <td>{{ $user->username }}</td>
+                            <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>
                                 <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>

@@ -12,7 +12,7 @@
                             <strong class="me-5">Id:</strong> {{$messi->id}}
                         </div>
                         <div class="ms-5 mb-3">
-                            <strong class="me-5">Username:</strong> {{$messi->username}}
+                            <strong class="me-5">name:</strong> {{$messi->name}}
                         </div>
                         <div class=" ms-5 mb-3">
                             <strong class="me-5">Email:</strong> {{$messi->email}}
